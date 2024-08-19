@@ -20,8 +20,18 @@ hf_hub_download(repo_id="google/pegasus-xsum", filename="config.json")
 # user = whoami(token=...)
 
 
-
 # 3. Create a repository
 from huggingface_hub import HfApi
 api = HfApi()
 api.create_repo(repo_id="super-cool-model")
+
+
+# 4. Upload files
+from huggingface_hub import HfApi
+api = HfApi()
+api.upload_file(
+    path_or_fileobj="/Users/sophia/GitHub/cookbook-ai/huggingface/README.md",
+    path_in_repo="HF_README.md",
+    repo_id="yuxiang204/super-cool-model",
+)
+
