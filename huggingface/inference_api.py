@@ -4,7 +4,7 @@
 import requests
 
 API_URL = "https://api-inference.huggingface.co/models/gpt2"
-API_TOKEN = "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"
+API_TOKEN = "<Your Token>"
 
 def query(prompt):
     headers = {"Authorization": f"Bearer {API_TOKEN}"}
