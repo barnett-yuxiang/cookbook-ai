@@ -34,4 +34,3 @@ api.upload_file(
     path_in_repo="HF_README.md",
     repo_id="yuxiang204/super-cool-model",
 )
-
