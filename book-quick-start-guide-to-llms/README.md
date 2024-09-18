@@ -63,9 +63,16 @@ T5: is a pure encoder/decoder Transformer model that was designed to perform sev
 1. Text Classification
 2. Translation Tasks
 3. SQL Generation
+4. Free-Text Generation
 
+>I will not often use the term “generative AI,” as the word “generative” has its own meaning in machine learning as the analogous way of learning to a “discriminative” model. 
 
+#### Semantic Search with LLMs
 
+OpenAI’s Embedding Engines
 
+Open-Source Embedding Alternatives: sentence_transformer package
 
+Document Chunking
 
+Vector Databases
