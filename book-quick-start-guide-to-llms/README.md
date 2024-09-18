@@ -32,5 +32,40 @@ Transfer learning is a technique used in machine learning to leverage the knowle
 
 ![](./assets/Figure-1_9.png)
 
+#### Attention
+
+Attention is a mechanism used in deep learning models (not just Transformers) that assigns different weights to different parts of the input, allowing the model to prioritize and emphasize the most important information while performing tasks like translation or summarization. 
+
+Modern LLMs that rely on attention can dynamically focus on different parts of input sequences, allowing them to weigh the importance of each part in making predictions.
+
+#### Embeddings
+
+Embeddings are the mathematical representations of words, phrases, or tokens in a large-dimensional space.
+
+LLMs learn different embeddings for tokens based on their pre-training and can further update these embeddings during fine-tuning.
+
+#### Tokenization
+
+breaking text down into the smallest unit of understanding—tokens. 
+
+#### Beyond Language Modeling: Alignment + RLHF
+
+#### Popular Modern LLMs
+
+BERT: is an autoencoding model that uses attention to build a bidirectional representation of a sentence.
+
+GPT-3 and ChatGPT: contrast to BERT, is an autoregressive model that uses attention to predict the next token in a sequence based on the previous tokens.
+
+T5: is a pure encoder/decoder Transformer model that was designed to perform several NLP tasks, from text classification to text summarization and generation, right off the shelf. 
+
+#### Classical NLP Tasks
+
+1. Text Classification
+2. Translation Tasks
+3. SQL Generation
+
+
+
+
 
 
