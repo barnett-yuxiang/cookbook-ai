@@ -30,5 +30,7 @@ Transfer learning is a technique used in machine learning to leverage the knowle
 
 #### Fine-Tuning
 
+![](./assets/Figure-1_9.png)
+
 
 
