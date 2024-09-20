@@ -95,5 +95,25 @@ Working with Prompts Across Models
 
 #### Optimizing LLMs with Customized Fine-Tuning
 
+##### Transfer Learning and Fine-Tuning: A Primer
+
+##### The Fine-Tuning Process Explained
+
+Training set
+
+Validation set
+
+Test set
+
+Loss function
+
+The process of fine-tuning can be broken down into a few steps:
+1. Collecting labeled data
+2. Hyperparameter selection // for example, the learning rate, batch size, and number of epochs. 
+3. Model adaptation
+4. Evaluation and iteration
+5. Model implementation and further training
+
+
 
 
