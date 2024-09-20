@@ -18,33 +18,33 @@ The original Transformer has two main components: an encoder, which is great at 
 
 How an LLM is **pre-trained** and **fine-tuned** makes all the difference between an okay-performing model and a state-of-the-art, highly accurate LLM. 
 
-#### Pre-training
+##### Pre-training
 Every LLM is trained on different corpora and on different tasks.
 
 BERT was originally pre-trained on English Wikipedia and the BookCorpus. More modern LLMs are trained on datasets thousands of times larger.
 
 Some LLMs are trained on proprietary data sources, including OpenAI’s GPT family of models, to give their parent companies an edge over their competitors.
 
-#### Transfer Learning
+##### Transfer Learning
 Transfer learning is a technique used in machine learning to leverage the knowledge gained from one task to improve performance on another related task. 
 
-#### Fine-Tuning
+##### Fine-Tuning
 
 ![](./assets/Figure-1_9.png)
 
-#### Attention
+##### Attention
 
 Attention is a mechanism used in deep learning models (not just Transformers) that assigns different weights to different parts of the input, allowing the model to prioritize and emphasize the most important information while performing tasks like translation or summarization. 
 
 Modern LLMs that rely on attention can dynamically focus on different parts of input sequences, allowing them to weigh the importance of each part in making predictions.
 
-#### Embeddings
+##### Embeddings
 
 Embeddings are the mathematical representations of words, phrases, or tokens in a large-dimensional space.
 
 LLMs learn different embeddings for tokens based on their pre-training and can further update these embeddings during fine-tuning.
 
-#### Tokenization
+##### Tokenization
 
 breaking text down into the smallest unit of understanding—tokens. 
 
@@ -76,3 +76,44 @@ Open-Source Embedding Alternatives: sentence_transformer package
 Document Chunking
 
 Vector Databases
+
+#### First Steps with Prompt Engineering
+
+Prompt Engineering
+
+Alignment in Language Models
+
+Few-Shot Learning
+
+Output Structuring
+
+Prompting Personas
+
+Working with Prompts Across Models
+
+### II: Getting the Most Out of LLMs
+
+#### Optimizing LLMs with Customized Fine-Tuning
+
+##### Transfer Learning and Fine-Tuning: A Primer
+
+##### The Fine-Tuning Process Explained
+
+Training set
+
+Validation set
+
+Test set
+
+Loss function
+
+The process of fine-tuning can be broken down into a few steps:
+1. Collecting labeled data
+2. Hyperparameter selection // for example, the learning rate, batch size, and number of epochs. 
+3. Model adaptation
+4. Evaluation and iteration
+5. Model implementation and further training
+
+
+
+
