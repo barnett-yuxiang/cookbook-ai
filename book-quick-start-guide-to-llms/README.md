@@ -76,3 +76,4 @@ Open-Source Embedding Alternatives: sentence_transformer package
 Document Chunking
 
 Vector Databases
+
