@@ -114,6 +114,7 @@ The process of fine-tuning can be broken down into a few steps:
 4. Evaluation and iteration
 5. Model implementation and further training
 
+##### Preparing Custom Examples with the OpenAI CLI
 
 
 
