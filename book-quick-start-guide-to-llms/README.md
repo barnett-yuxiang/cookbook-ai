@@ -116,5 +116,13 @@ The process of fine-tuning can be broken down into a few steps:
 
 ##### Preparing Custom Examples with the OpenAI CLI
 
+Setting Up the OpenAI CLI
+
+Hyperparameter Selection and Optimization:
+1. Learnig rate
+2. Batch size
+3. Traning epochs
+
+##### Our First Fine-Tuned LLM
 
 
