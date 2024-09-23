@@ -185,4 +185,18 @@ def format_k_shot_gsm(examples, cot=True):
 Three examples seems to be the sweet spot for OpenAI. 
 We can see that, in general, there does seem to be an optimal number of examples for our LLMs. Three seems to be a great number for working with OpenAI models, but more work could be done on Cohere to improve performance.
 
+![](./assets/Figure-5_12.png)
+
+---
+
+![](./assets/Figure-5_13.png)
+
+##### Testing and Iterative Prompt Development
+
+Advanced prompting techniques can enhance the capabilities of LLMs; they are both challenging and rewarding. We saw how dynamic few-shot learning, chain-of-thought prompting, and multimodal LLMs can broaden the scope of tasks that we want to tackle effectively. We also dug into how implementing security measures, such as using an NLI model like BART-MNLI as an off-the-shelf output validator or using chaining to prevent injection attacks, can help address the responsible use of LLMs.
+
+Happy Prompting!
+
+### 6 Customizing Embeddings and Model Architectures
+
 
