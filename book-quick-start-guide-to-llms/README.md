@@ -149,4 +149,36 @@ Figure 5.10 Our multimodal prompt chain—starting with a user in the top left s
 
 ##### Chain-of-Thought Prompting
 
+Chain-of-thought prompting is a method that forces LLMs to reason through a series of steps, resulting in more structured, transparent, and precise outputs. The goal is to break down complex tasks into smaller, interconnected subtasks, allowing the LLM to address each subtask in a step-by-step manner. This not only helps the model to “focus” on specific aspects of the problem, but also encourages it to generate intermediate outputs, making it easier to identify and debug potential issues along the way.
+
+Another significant advantage of chain-of-thought prompting is the improved interpretability and transparency of the LLM-generated response. By offering insights into the model’s reasoning process, we, as users, can better understand and qualify how the final output was derived, which promotes trust in the model’s decision-making abilities.
+
+##### Example: Grade-School Arithmetic with LLMs
+
+our goal in this example is to enhance an LLM’s ability to understand, reason, and solve relatively intricate math word problems.
+
+For this example, we will use an open-source dataset called GSM8K (Grade School Math 8K), a dataset of 8500 linguistically diverse, grade-school math word problems. 
+
+An example of the GSM8K dataset shows a question and a chain of thought that walks through how to solve the problem step by step, resulting in the final answer after a delimiter “####”. Note we are using the main subset; a subset of this dataset called socratic has the same format but its chain of thought follows the Socratic method.
+
+Note how the GSM8K dataset includes << >> markers for equations, just as ChatGPT and GPT-4 do. This is because those LLMs were in part trained using similar datasets with similar notation.
+
+arithmetic questions 
+
+![](./assets/Figure-5_11.png)
+
+---
+
+```python
+def format_k_shot_gsm(examples, cot=True):
+    if cot:
+        
+        return '\n###\n'.join(
+            [f'Question: {e["question"]}\nReasoning: {e["answer"].split("####")[0].strip()}\nAnswer: {e["answer"].split("#### ")[-1]}' for e in examples]
+        )
+    else:
+        return '\n###\n'.join(
+            [f'Question: {e["question"]}\nAnswer: {e["answer"].split("#### ")[-1]}' for e in examples]
+        )
+```
 
