@@ -182,3 +182,7 @@ def format_k_shot_gsm(examples, cot=True):
         )
 ```
 
+Three examples seems to be the sweet spot for OpenAI. 
+We can see that, in general, there does seem to be an optimal number of examples for our LLMs. Three seems to be a great number for working with OpenAI models, but more work could be done on Cohere to improve performance.
+
+
