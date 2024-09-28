@@ -199,4 +199,24 @@ Happy Prompting!
 
 ### 6 Customizing Embeddings and Model Architectures
 
+### 7 Advanced LLM Usage
 
+#### Case Study: Reinforcement Learning from Feedback
+
+General, defining what constitutes “good” output text can be challenging, as it is often subjective and task/context-dependent. 
+
+When we fine-tune LLMs, we must design a loss function to guide training. But designing a loss function that captures these more subjective attributes can seem intractable, and most language models continue to be trained using a simple next-token prediction loss (autoregressive language modeling), such as cross-entropy. As for output evaluation, some metrics were designed to better capture human preferences, such as BLEU or ROUGE; however, these metrics still have limitations, as they compare generated text to reference texts using very simple rules and heuristics. We could use an embedding similarity to compare outputs to ground truth sequences, but this approach considers only semantic information, which isn’t always the only thing we need to compare. We might want to consider the style of the text, for example.
+
+But what if we could use live feedback (human or automated) for evaluating generated text as a performance measure or even as a loss function to optimize the model? That’s where reinforcement learning from feedback (RLF)—RLHF for human feedback and RLAIF for AI feedback—comes into play. By employing reinforcement learning methods, RLF can directly optimize a language model using real-time feedback, allowing models trained on a general corpus of text data to align more closely with nuanced human values.
+
+ChatGPT is one of the first notable applications of RLHF. While OpenAI provides an impressive explanation of RLHF, it doesn’t cover everything, so I’ll fill in the gaps.
+
+The training process basically breaks down into three core steps:
+```
+1. Pre-training a language model: Pre-training a language model involves training the model on a large corpus of text data, such as articles, books, and websites, or even a curated dataset. During this phase, the model learns to generate text for general corpora or in service of a task. This process helps the model to learn grammar, syntax, and some level of semantics from the text data. The objective function used during pre-training is typically the cross-entropy loss, which measures the difference between the predicted token probabilities and the true token probabilities. Pre-training allows the model to acquire a foundational understanding of the language, which can later be fine-tuned for specific tasks.
+
+2. Defining (potentially training) a reward model: After pre-training the language model, the next step is to define a reward model that can be used to evaluate the quality of the generated text. This involves gathering human feedback, such as rankings or scores for different text samples, which can be used to create a dataset of human preferences. The reward model aims to capture these preferences, and can be trained as a supervised learning problem, where the goal is to learn a function that maps generated text to a reward signal (a scalar value) representing the quality of the text according to human feedback. The reward model serves as a proxy for human evaluation and is used during the reinforcement learning phase to guide the fine-tuning process.
+
+3. Fine-tuning the LM with reinforcement learning: With a pre-trained language model and a reward model in place, the final step is to fine-tune the language model using reinforcement learning techniques. In this phase, the model generates text, receives feedback from the reward model, and updates its parameters based on the reward signal. The objective is to optimize the language model such that the generated text aligns closely with human preferences. Popular reinforcement learning algorithms used in this context include Proximal Policy Optimization (PPO) and Trust Region Policy Optimization (TRPO). Fine-tuning with reinforcement learning allows the model to adapt to specific tasks and generate text that better reflects human values and preferences.
+
+```
