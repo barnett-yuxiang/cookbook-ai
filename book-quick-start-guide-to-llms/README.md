@@ -216,9 +216,9 @@ The training process basically breaks down into three core steps:
 2. Defining (potentially training) a reward model: After pre-training the language model, the next step is to define a reward model that can be used to evaluate the quality of the generated text. This involves gathering human feedback, such as rankings or scores for different text samples, which can be used to create a dataset of human preferences. The reward model aims to capture these preferences, and can be trained as a supervised learning problem, where the goal is to learn a function that maps generated text to a reward signal (a scalar value) representing the quality of the text according to human feedback. The reward model serves as a proxy for human evaluation and is used during the reinforcement learning phase to guide the fine-tuning process.
 3. Fine-tuning the LM with reinforcement learning: With a pre-trained language model and a reward model in place, the final step is to fine-tune the language model using reinforcement learning techniques. In this phase, the model generates text, receives feedback from the reward model, and updates its parameters based on the reward signal. The objective is to optimize the language model such that the generated text aligns closely with human preferences. Popular reinforcement learning algorithms used in this context include Proximal Policy Optimization (PPO) and Trust Region Policy Optimization (TRPO). Fine-tuning with reinforcement learning allows the model to adapt to specific tasks and generate text that better reflects human values and preferences.
 
-### 8
+### 8 Advanced Open-Source LLM Fine-Tuning
 
-#### Sinan‘s Attempt at Wise Yet Engaging Responses: SAWYER
+##### Sinan‘s Attempt at Wise Yet Engaging Responses: SAWYER
 
 The plan to make SAWYER a reality has three steps:
 1. make GPT-2 understand the concept of answering a question
@@ -232,3 +232,12 @@ Step 3: Reinforcement Learning from (Estimated) Human Feedback
 
 In general, given our tasks, custom losses, and custom RLF loops, it seems that SAWYER may be ready to answer some questions, so let’s give it some to try it out.
 
+##### The Ever-Changing World of Fine-Tuning
+
+For example, one fascinating technique that’s captured the attention of LLM engineers in recent years is **PEFT** **LoRA**.
+1. Parameter-efficient fine-tuning (PEFT) greatly shrinks the number of adjustable parameters within an LLM by freezing the majority of pre-trained weights in place and adding only a few additional weights on the side.
+2. Low-rank adaptation (LoRA) further slims down the supplemental weights from PEFT by decomposing them into compact, lower-rank matrices.
+
+The combined strength of PEFT and LoRA offers an impressive reduction in training time and memory requirements, allowing for more flexible and optimal LLM fine-tuning without sacrificing much (if any) performance.
+
+Summary: Our focus on fine-tuning BERT for classification highlighted that even simple tasks can be greatly optimized with techniques such as `freezing`, `gradient accumulation`, and `semantic downsampling`. Careful balancing of these elements can lead to improved performance. The depth of control and customization available when we fine-tune these models are vast and permit us to adapt them to a wide array of tasks and domains.
