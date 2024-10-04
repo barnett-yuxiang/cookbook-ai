@@ -216,3 +216,19 @@ The training process basically breaks down into three core steps:
 2. Defining (potentially training) a reward model: After pre-training the language model, the next step is to define a reward model that can be used to evaluate the quality of the generated text. This involves gathering human feedback, such as rankings or scores for different text samples, which can be used to create a dataset of human preferences. The reward model aims to capture these preferences, and can be trained as a supervised learning problem, where the goal is to learn a function that maps generated text to a reward signal (a scalar value) representing the quality of the text according to human feedback. The reward model serves as a proxy for human evaluation and is used during the reinforcement learning phase to guide the fine-tuning process.
 3. Fine-tuning the LM with reinforcement learning: With a pre-trained language model and a reward model in place, the final step is to fine-tune the language model using reinforcement learning techniques. In this phase, the model generates text, receives feedback from the reward model, and updates its parameters based on the reward signal. The objective is to optimize the language model such that the generated text aligns closely with human preferences. Popular reinforcement learning algorithms used in this context include Proximal Policy Optimization (PPO) and Trust Region Policy Optimization (TRPO). Fine-tuning with reinforcement learning allows the model to adapt to specific tasks and generate text that better reflects human values and preferences.
 
+### 8
+
+#### Sinan‘s Attempt at Wise Yet Engaging Responses: SAWYER
+
+The plan to make SAWYER a reality has three steps:
+1. make GPT-2 understand the concept of answering a question
+2. define a reward model that rates human-preferred responses to questions highly, and
+3. set up a reinforcement learning loop to nudge GPT-2 to give human-preferred responses.
+
+let’s roll up our sleeves and get to work!:
+Step 1: Supervised Instruction Fine-Tuning
+Step 2: Reward Model Training // Defining a Custom Loss Function
+Step 3: Reinforcement Learning from (Estimated) Human Feedback
+
+In general, given our tasks, custom losses, and custom RLF loops, it seems that SAWYER may be ready to answer some questions, so let’s give it some to try it out.
+
