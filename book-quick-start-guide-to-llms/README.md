@@ -241,3 +241,9 @@ For example, one fascinating technique that’s captured the attention of LLM en
 The combined strength of PEFT and LoRA offers an impressive reduction in training time and memory requirements, allowing for more flexible and optimal LLM fine-tuning without sacrificing much (if any) performance.
 
 Summary: Our focus on fine-tuning BERT for classification highlighted that even simple tasks can be greatly optimized with techniques such as `freezing`, `gradient accumulation`, and `semantic downsampling`. Careful balancing of these elements can lead to improved performance. The depth of control and customization available when we fine-tune these models are vast and permit us to adapt them to a wide array of tasks and domains.
+
+### 9 Moving LLMs into Production
+
+Quantization is a technique used to reduce the precision of the weights and biases in a neural network. It results in a smaller model size and faster inference time, with a modest decrease in model accuracy. Different types of quantization are possible, including dynamic quantization (where weights are quantized at runtime), static quantization (which also includes input/output value scaling), and quantization-aware training, where the quantization error is considered during the training phase itself.
+
+Pruning is another technique that helps reduce the size of an LLM. It involves removing those weights in the neural network that contribute the least to the model’s output, thereby reducing the complexity of the model. This results in faster inference times and a smaller memory footprint, making it particularly useful for deploying models in resource-constrained environments.
