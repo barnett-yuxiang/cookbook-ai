@@ -247,3 +247,42 @@ Summary: Our focus on fine-tuning BERT for classification highlighted that even 
 Quantization is a technique used to reduce the precision of the weights and biases in a neural network. It results in a smaller model size and faster inference time, with a modest decrease in model accuracy. Different types of quantization are possible, including dynamic quantization (where weights are quantized at runtime), static quantization (which also includes input/output value scaling), and quantization-aware training, where the quantization error is considered during the training phase itself.
 
 Pruning is another technique that helps reduce the size of an LLM. It involves removing those weights in the neural network that contribute the least to the model’s output, thereby reducing the complexity of the model. This results in faster inference times and a smaller memory footprint, making it particularly useful for deploying models in resource-constrained environments.
+
+### B. LLM  Glossary
+
+#### Transformer Architecture
+
+The foundational structure for modern LLMs, the Transformer architecture introduced in 2017 was a sequence-to-sequence model comprising two main components: an encoder and a decoder. The encoder is responsible for processing raw text, splitting it into core components, converting these into vectors, and using attention to grasp the context. The decoder excels at generating text by predicting the next best token using a modified attention mechanism. Despite their complexity, Transformers and their variants, such as BERT and GPT, have revolutionized the understanding and generation of text in natural language processing (NLP).
+
+#### Attention Mechanism
+
+Introduced in the original Transformer paper, “Attention Is All You Need,” attention allows LLMs to focus dynamically on various parts of an input sequence, determining the importance of each part in making predictions. Unlike earlier neural networks, which processed all inputs equally, attention-powered LLMs have revolutionized prediction accuracy.
+
+The attention mechanism is mainly responsible for enabling LLMs to learn or recognize internal world models and human-identifiable rules. Some research indicates that LLMs can learn a set of rules for synthetic tasks like playing the game of Othello, simply by training them on historical move data. This has opened up new avenues for exploring what other kinds of “rules” LLMs can learn through pre-training and fine-tuning.
+
+#### Large Language Model (LLM)
+
+LLMs are advanced natural language processing (NLP) deep learning models. They specialize in both processing contextual language at scale and predicting the likelihood of a sequence of tokens in a specific language. The smallest units of semantic meaning, tokens can be words or sub-words and act as the key inputs for an LLM. LLMs can be categorized as autoregressive, autoencoding, or a combination of both. Their defining feature is their substantial size, which enables them to execute complex language tasks like text generation and classification, with high precision and potentially minimal fine-tuning.
+
+#### Autoregressive Language Models
+Autoregressive language models predict the next token in a sentence based solely on the prior tokens in the sequence. They correspond to the decoder part of the Transformer model and are typically applied in text generation tasks. An example of such a model is GPT.
+
+#### Autoencoding Language Models
+
+Autoencoding language models are designed to reconstruct the original sentence from a corrupted version of the input, making them the encoder part of the Transformer model. With access to the complete input without any mask, they can generate bidirectional representations of entire sentences. Autoencoding models can be fine-tuned for various tasks, from text generation to sentence or token classification. BERT is a representative example.
+
+#### Transfer Learning
+
+Transfer learning is a machine learning technique in which knowledge gained from one task is utilized to enhance performance on another related task. In LLMs, transfer learning implies fine-tuning a pre-trained LLM for specific tasks, such as text classification or text generation, using smaller amounts of task-specific data. This makes the training process more time-and resource-efficient.
+
+#### Prompt Engineering
+
+Prompt engineering focuses on designing effective prompts—that is, inputs to LLMs—that clearly convey the task to the LLM, resulting in accurate and beneficial outputs. It’s a craft that demands an understanding of language subtleties, the particular domain in question, and the capabilities and constraints of the LLM in use.
+
+#### Alignment
+
+The concept of alignment deals with the degree to which a language model can comprehend and react to prompts in a manner consistent with user expectations. Traditional language models, which predict the next word or sequence based on the preceding context, don’t allow for specific instructions or prompts, limiting their application scope. Some models do incorporate advanced alignment features, such as AI’s RLAIF and OpenAI’s RLHF, improving their prompt response capacity and usefulness in applications like question-answering and language translation.
+
+#### Reinforcement Learning from Human Feedback (RLHF)
+
+RLHF is an alignment technique used in machine learning that involves training an AI model based on feedback from human overseers. The human provides rewards or penalties to the model based on its responses, effectively guiding its learning process. The aim is to refine the model’s behavior so that its responses align more closely with human expectations and needs.
