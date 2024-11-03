@@ -91,9 +91,39 @@ ChatGPT is a good tool to help with **documentation for project management**. It
 
 ### Part 3. The feedback
 
+These include unit tests, integration tests, and behavior tests. To start, we will use Copilot Chat to help us create a unit test.
 
+unittest provides a rich set of assertions and is great for writing simple to complex test cases, but it can be verbose.
+
+Behavioral testing focuses on defining the behavior of the software in terms of user stories or scenarios. These scenarios are written in a specific format called given-when-then (GWT) and are used to drive the development process. The GWT format describes the preconditions (given), the actions (when), and the expected outcomes (then) of a particular scenario.
+
+This section delves into the fascinating and intricate domain of software quality metrics—the quantitative standards and benchmarks that guide our understanding of the quality of a software system:
+1. Definition Cyclomatic complexity is a metric that quantifies the number of independent paths through a software module. It measures the complexity of decision-making in the code, including loops, conditionals, and branches. A higher cyclomatic complexity value indicates increased complexity and suggests the potential for more bugs and challenges in understanding and maintaining the code.
+2. Definition Halstead complexity measures assess the complexity of a software program based on the number of unique operators and operands used in the code. These measures include metrics such as program length (N1), program vocabulary (n1), volume (V), difficulty (D), effort (E), and others. These metrics provide insights into the size and cognitive complexity of the code.
+3. Definition The maintainability index is a composite metric that combines several factors, including cyclomatic complexity, lines of code, and Halstead complexity measures, to provide an overall measure of software maintainability. A higher maintainability index suggests easier maintenance and potentially lower complexity.
+
+
+![Copilot Chat explaining the behavior test we wrote earlier](./assets/screenshot-20241103-181128.png)
+> Copilot Chat explaining the behavior test we wrote earlier
+
+Summary
+- Unit testing focuses on testing individual components or units of code to identify bugs and problems in specific units. Unit tests will be the most numerous in your codebase.
+- Integration testing tests the interaction between different components or modules of the software to ensure seamless integration and detect communication problems.
+- Behavior testing tests a system’s functionality from an end user’s perspective, ensuring that it meets requirements and specifications.
+- Mock objects simulate the behavior of natural objects in a controlled way and are useful for testing and simulating error conditions. Mock objects are especially good at mimicking parts of the system that are needed for the test to run but are outside the scope of the test: for example, if your class has a constructor argument for a database, but you do not want to test the database directly because the data may change, causing your test to be inconclusive, nonrepeatable, or nondeterministic.
+- Cyclomatic complexity measures the number of independent paths through a software module, indicating complexity and potential for bugs.
+- Halstead complexity measures assess software complexity based on unique operators and operands, providing insights into code size and cognitive complexity.
+- The maintainability index combines factors like cyclomatic complexity, lines of code, and Halstead measures to evaluate software maintainability.
+- Code coverage is a metric for evaluating test effectiveness, indicating the extent to which code is tested and the potential for uncaught bugs. Generally, higher is better.
 
 ### Part 4. Into the world
 
+Fortunately, Copilot can write **Helm charts** for you as well!
 
+NOTE This discussion of Terraform is heavily abridged. When you are ready to get serious with Terraform, your go-to resource should be Scott Winkler’s Terraform in Action (Manning, 2021; www.manning.com/books/terraform-in-action).
 
+You learned about the transition from application development to product launch, covering deployment strategies, best practices for cloud infrastructure, and the use of Docker and Terraform for managing and containerizing applications efficiently.
+
+You’ve learned how to use ChatGPT’s knowledge to identify potential threats, evaluate threat scenarios, pinpoint vulnerabilities, and assess application designs against best practices.
+
+Let’s focus on another LLM we can run locally: GPT-4All
