@@ -31,8 +31,9 @@ payload = {
     "top_k": 50,
     "top_p": 0.7
 }
+import os
 headers = {
-    "Authorization": "Bearer <API Key>",
+    "Authorization": f"Bearer {os.environ.get('SILICON_API_KEY')}",
     "Content-Type": "application/json"
 }
 
