@@ -7,12 +7,24 @@ payload = {
     "messages": [
         {
             "role": "user",
-            "content": []
+            "content": [
+                {
+                    "type": "image_url",
+                    "image_url": {
+                        "url": "https://sf-maas-uat-prod.oss-cn-shanghai.aliyuncs.com/outputs/658c7434-ec12-49cc-90e6-fe22ccccaf62_00001_.png",
+                        "detail":"high"
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Please describe the content of the picture, the more detailed the better"
+                }
+            ]
         }
     ],
     "stream": False,
     "max_tokens": 4096,
-    "temperature": 0.7,
+    "temperature": 0.2,
     "response_format": {"type": "text"},
     "n": 1,
     "frequency_penalty": 0.5,
