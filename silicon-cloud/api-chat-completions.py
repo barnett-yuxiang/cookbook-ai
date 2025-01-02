@@ -37,6 +37,9 @@ headers = {
     "Content-Type": "application/json"
 }
 
-response = requests.request("POST", url, json=payload, headers=headers)
-
-print(response.text)
+try:
+    response = requests.request("POST", url, json=payload, headers=headers)
+    response.raise_for_status()
+    print(response.text)
+except requests.exceptions.RequestException as e:
+    print(f"Error making API request: {e}")
