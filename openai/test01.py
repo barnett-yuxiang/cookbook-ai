@@ -11,7 +11,7 @@ format '[1,2],[3,4],[5,6]' and prints the transpose in the same format.
 """
 
 response = client.chat.completions.create(
-    model="o3-mini",
+    model="o3-mini", # need tier 3
     reasoning_effort="medium",
     messages=[{"role": "user", "content": prompt}],
 )
