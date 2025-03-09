@@ -31,15 +31,11 @@ payload = {
     "top_k": 50,
     "top_p": 0.7
 }
-import os
 headers = {
-    "Authorization": f"Bearer {os.environ.get('SILICON_API_KEY')}",
+    "Authorization": "Bearer <API Key>",
     "Content-Type": "application/json"
 }
 
-try:
-    response = requests.request("POST", url, json=payload, headers=headers)
-    response.raise_for_status()
-    print(response.text)
-except requests.exceptions.RequestException as e:
-    print(f"Error making API request: {e}")
+response = requests.request("POST", url, json=payload, headers=headers)
+
+print(response.text)

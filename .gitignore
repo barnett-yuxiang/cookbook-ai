@@ -10,3 +10,6 @@ __pycache__/
 
 # Ignore test coverage files
 .coverage
+
+# Ignore environment variables file
+.env
