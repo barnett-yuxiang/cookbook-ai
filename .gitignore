@@ -13,3 +13,4 @@ __pycache__/
 
 # Ignore environment variables file
 .env
+.qodo
